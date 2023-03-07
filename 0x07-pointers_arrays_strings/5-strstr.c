@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include "main.h"
+
 /**
  * _strstr - Entry point
  * @haystack: input
@@ -9,12 +11,12 @@ char *_strstr(char *haystack, char *needle)
 {
 	for (; *haystack != '\0'; haystack++)
 	{
-		char *1 = haystack;
+		char *one = haystack;
 		char *p = needle;
 
-		while (*1 == *p && *p != '\0')
+		while (*one == *p && *p != '\0')
 		{
-			1++;
+			one++;
 			p++;
 		}
 		if (*p == '\0')
