@@ -44,7 +44,7 @@ int pali(char *s, int i)
 
 int is_palindrome(char *s)
 {
-	int len = strlen_recursion(s);
+	int len = _strlen_recursion(s);
 
 	return (pali(s, len - 1));
 }
