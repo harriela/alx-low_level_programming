@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
-int check_prime(int n, int i)
+int prime_number(int n, int i)
 
 /**
  * is_prime_number - Returns if a number is prime
@@ -10,7 +10,10 @@ int check_prime(int n, int i)
  */
 int is_prime_number(int n)
 {
-	return (check_prime(n, 1));
+	if (n <= 1)
+		return (0);
+
+	return (prime_number(n, n - 1));
 }
 
 /**
@@ -21,14 +24,15 @@ int is_prime_number(int n)
  */
 int check_prime(int n, int i)
 {
-	if (n <= 1)
-		return (0);
-
-	if (n % i == 0 && i > 1)
-		return (0);
-
-	if ((n / i) < i)
+	if (i == 1)
+	{
 		return (1);
+	}
 
-	return (check_prime(n. i + 1));
+	if (n % i == 0 && i > 0)
+	{
+		return (0);
+	}
+
+	return (prime_number(n, i - 1));
 }
