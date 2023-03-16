@@ -49,7 +49,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	return (ptr);
 }
 
-
 /**
  * multiply - initialize array with 0 byte
  *
@@ -101,7 +100,6 @@ void multiply(char *s1, char *s2)
 	printf("\n");
 	free(temp);
 }
-
 
 /**
  * main - Entry point
